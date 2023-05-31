@@ -48,8 +48,8 @@ public class GetOrderListTest {
     }
 
     @Test
-    @DisplayName("Check get user order list (200)")
-    @Description("Get  successfully")
+    @DisplayName("Check get user order list without authorization (401)")
+    @Description("Getting a list of orders is not possible")
     public void checkGetOrderListUnauthorizedUser(){
         //Создали юзера и получили токен
         ValidatableResponse createUserResponse = userClient.createUser(user);
